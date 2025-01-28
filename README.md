@@ -61,8 +61,10 @@ The repository is organized into the following folders:
 
 ## Teams:
 
-<Team Name>:
- * <Member 1>
- * <Member 2> 
+Equipo 2.0:
+ * Yael Alejandro Rodriguez Barreto
+ * Ximena Isaac Horta
+ * Lorena Ruelas Gaytan
+ * Alberto Renteria Camacho
 
 ...
