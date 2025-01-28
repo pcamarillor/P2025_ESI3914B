@@ -54,3 +54,47 @@ The repository is organized into the following folders:
 
 7. **Submit the Pull Request (PR) URL in Canvas**
     Go to the corresponing to each lab code assigment in Canvas and submit the PR URL.
+
+# Collaborators
+
+## Professor: Pablo Camarillo
+
+## Teams:
+
+Equipo 2.0:
+ * Yael Alejandro Rodriguez Barreto
+ * Ximena Isaac Horta
+ * Lorena Ruelas Gaytan
+ * Alberto Renteria Camacho
+
+Equibo Bellaco
+* Angel David Cortes Pachecho
+* Benjamin Leonardo Zarate Solano
+* David Abraham Naranjo Salgado
+
+Equipo Jose Jose Andres Eduardo
+* Jose Mendoza
+* Jose Eduardo
+* Jose Cota
+* Andres Eduardo
+
+Equipo Whatsapp 2 
+* Angel Gabriel Ramirez Carrillo
+* Alejandro Samuel Romero Mora
+* Yochabel Martinez Cazares
+* Roberto Osorno Liz
+
+Equipo Gatubelxs
+* Luis Raul Acosta Mendoza
+* Samantah Abigail Quintero Valadez
+* Arturo Benjamin Vergara Romo
+
+Equipo ArribaLinux
+* Juan Pedro Bihouet Partida
+* Ana Cristina Luna Arellano
+* Tirzah Peniche Barba
+
+Equipo McQueen
+* Marco Albanese
+* Vicente Siloe Lopez Rodriguez
+...
