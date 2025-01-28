@@ -82,5 +82,11 @@ Equipo Whatsapp 2
 * Angel Gabriel Ramirez Carrillo
 * Alejandro Samuel Romero Mora
 * Yochabel Martinez Cazares
-* Roberto Osorno Liz 
+* Roberto Osorno Liz
+*
+Equipo Gatubelxs
+*Luis Raul Acosta Mendoza
+*Samantah Abigail Quintero Valadez
+*Arturo Benjamin Vergara Romo
+
 ...
