@@ -67,4 +67,9 @@ Equipo 2.0:
  * Lorena Ruelas Gaytan
  * Alberto Renteria Camacho
 
+Equibo Bellaco
+* Angel David Cortes Pachecho
+* Benjamin Leonardo Zarate Solano
+* David Abraham Naranjo Salgado
+
 ...
