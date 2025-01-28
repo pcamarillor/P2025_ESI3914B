@@ -89,4 +89,9 @@ Equipo Gatubelxs
 *Samantah Abigail Quintero Valadez
 *Arturo Benjamin Vergara Romo
 
+Equipo ArribaLinux
+*Juan Pedro Bihouet Partida
+*Ana Cristina Luna Arellano
+*Tirzah Peniche Barba
+
 ...
