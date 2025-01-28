@@ -78,4 +78,9 @@ Equipo Jose Jose Andres Eduardo
 * Jose Cota
 * Andres Eduardo
 
+Equipo Whatsapp 2 
+* Angel Gabriel Ramirez Carrillo
+* Alejandro Samuel Romero Mora
+* Yochabel Martinez Cazares
+* Roberto Osorno Liz 
 ...
