@@ -72,4 +72,10 @@ Equibo Bellaco
 * Benjamin Leonardo Zarate Solano
 * David Abraham Naranjo Salgado
 
+Equipo Jose Jose Andres Eduardo
+* Jose Mendoza
+* Jose Eduardo
+* Jose Cota
+* Andres Eduardo
+
 ...
