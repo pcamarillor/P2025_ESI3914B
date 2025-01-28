@@ -83,15 +83,18 @@ Equipo Whatsapp 2
 * Alejandro Samuel Romero Mora
 * Yochabel Martinez Cazares
 * Roberto Osorno Liz
-*
+
 Equipo Gatubelxs
-*Luis Raul Acosta Mendoza
-*Samantah Abigail Quintero Valadez
-*Arturo Benjamin Vergara Romo
+* Luis Raul Acosta Mendoza
+* Samantah Abigail Quintero Valadez
+* Arturo Benjamin Vergara Romo
 
 Equipo ArribaLinux
-*Juan Pedro Bihouet Partida
-*Ana Cristina Luna Arellano
-*Tirzah Peniche Barba
+* Juan Pedro Bihouet Partida
+* Ana Cristina Luna Arellano
+* Tirzah Peniche Barba
 
+Equipo McQueen
+* Marco Albanese
+* Vicente Siloe Lopez Rodriguez
 ...
