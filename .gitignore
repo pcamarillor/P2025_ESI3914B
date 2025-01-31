@@ -1,4 +1,5 @@
 # Notebook's checkpoints
 spark_cluster/notebooks/.DS_Store
+spark_cluster/notebooks/labs/.DS_Store
 spark_cluster/notebooks/examples/.ipynb_checkpoints
 spark_cluster/notebooks/examples/lib/__pycache__/bank_account.cpython-311.pyc
