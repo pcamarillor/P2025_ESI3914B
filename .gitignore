@@ -1,5 +1,8 @@
 # Notebook's checkpoints
+spark_cluster/data/
+spark_cluster/.DS_Store
 spark_cluster/notebooks/.DS_Store
+spark_cluster/docker/.DS_Store
 spark_cluster/notebooks/labs/.DS_Store
 spark_cluster/notebooks/labs/.ipynb_checkpoints/*
 spark_cluster/notebooks/examples/.ipynb_checkpoints
