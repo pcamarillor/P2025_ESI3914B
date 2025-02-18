@@ -35,6 +35,7 @@ sample_data = [
     ("phone", "StringType" ),
     ("created_at", "TimestampType"),
     ("height", "FloatType"),
+    ("weight", "FloatType"),
 ]
 
 schema = SparkUtils.generate_schema(sample_data)
