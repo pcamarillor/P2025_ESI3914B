@@ -1,4 +1,5 @@
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType, BooleanType, DateType, LongType, ShortType, DoubleType, TimestampType, BinaryType
+from pyspark.sqk import DataFrame
 
 class SparkUtils:
     @staticmethod
@@ -20,4 +21,10 @@ class SparkUtils:
     
         return StructType(fields)
         
-        
+    @staticmethod
+    def clean_df(df: DataFrame) -> DataFrame:
+        return df.dropna()
+    
+    @staticmethod
+    def write_df(df: DataFrame, path: str):
+        df.write.partitionBy("release_year").parquet(path, mode="overwrite")
