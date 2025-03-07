@@ -1,4 +1,4 @@
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType, BooleanType, DateType, LongType, ShortType, DoubleType, TimestampType, BinaryType
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType, BooleanType, DateType, LongType, ShortType, DoubleType, TimestampType, BinaryType, ByteType, DecimalType
 
 class SparkUtils:
     @staticmethod
@@ -13,7 +13,9 @@ class SparkUtils:
             "boolean": BooleanType(),
             "date": DateType(),
             "timestamp": TimestampType(),
-            "binary": BinaryType()
+            "binary": BinaryType(),
+            "byte": ByteType(),
+            "decimal": DecimalType()
         }
 
         fields = [StructField(data, types_dic[data_type], True) for data, data_type in columns_info]
