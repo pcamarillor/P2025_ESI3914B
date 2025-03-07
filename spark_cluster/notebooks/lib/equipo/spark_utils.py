@@ -2,20 +2,18 @@ from pyspark.sql.types import *
 
 
 types = {
-"StringType": StringType(),
-"IntegerType": IntegerType(),
-"LongType": LongType(),
-"ShortType": ShortType(),
-"DoubleType": DoubleType(),
-"FloatType": FloatType(),
-"BooleanType": BooleanType(),
-"DateType": DateType(),
-"TimestampType": TimestampType(),
-"BinaryType": BinaryType(),
-"ArrayType": ArrayType,
-"MapType" : MapType,
-"StructType": StructType
+    "string": StringType(),
+    "integer": IntegerType(),
+    "long": LongType(),
+    "short": ShortType(),
+    "double": DoubleType(),
+    "float": FloatType(),
+    "boolean": BooleanType(),
+    "date": DateType(),
+    "timestamp": TimestampType(),
+    "binary": BinaryType(),
 }
+
 
 class SparkUtils:
     @staticmethod
