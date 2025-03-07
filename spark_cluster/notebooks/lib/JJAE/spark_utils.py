@@ -1,28 +1,37 @@
-from pyspark.sql.types import StructType ,StructField, StringType, IntegerType,FloatType,DateType,BooleanType,DoubleType,ByteType,TimestampType,ShortType,BinaryType,LongType,DecimalType
-
+from pyspark.sql.types import (
+    StructType, StructField, StringType, IntegerType, LongType, ShortType,
+    DoubleType, FloatType, BooleanType, DateType, TimestampType, BinaryType
+)
+ 
 class SparkUtils:
     @staticmethod
     def generate_schema(columns_info) -> StructType:
-        struct_type_dict = {
-                            "byte":ByteType(),
-                            "string": StringType(),
-                            "float": FloatType(),
-                            "integer": IntegerType(),
-                            "bool": BooleanType(),
-                            "date": DateType(),
-                            "double": DoubleType(),
-                            "timestamp":TimestampType(),
-                            "short": ShortType(),
-                            "binary":BinaryType(),
-                            "long": LongType(),
-                            "decimal": DecimalType()
-                        }
-        struct_list=[]
-        for col in columns_info:
-           st= StructField(col[0], struct_type_dict[col[1]], True)
-           struct_list.append(st)
-           
-        return StructType(struct_list)
+        # Store all types in a dictionary
+        types_dic = {
+            "StringType": StringType(),
+            "IntegerType": IntegerType(),
+            "LongType": LongType(),
+            "ShortType": ShortType(),
+            "DoubleType": DoubleType(),
+            "FloatType": FloatType(),
+            "BooleanType": BooleanType(),
+            "DateType": DateType(),
+            "TimestampType": TimestampType(),
+            "BinaryType": BinaryType()
+        }
+ 
+        # Create schema
+        schema = [StructField(column, types_dic[data_type], True) for column, data_type in columns_info]
+        return StructType(schema)
+    
+    def clean_df(df):
+        return df.dropna()
+
+    def write_df(df, column, path):
+        df.write \
+                .mode("overwrite") \
+                .partitionBy(column) \
+                .parquet(f"/home/jovyan/notebooks/data/{path}")
         
         
         
