@@ -35,5 +35,23 @@ class SparkUtils:
         ]
         
         return StructType(fields)
+    
+
+    def clean_df(spark,path,output_path):
+        df = spark.read.option("header", True).csv(path)  # Replace with actual file path
+
+    # Drop rows with null values
+    #fillna 
+        df_cleaned = df.dropna(how="any")
+
+        df_cleaned.write.mode("overwrite").option("header", True).csv(output_path)
 
 
+    def write_df(spark,input_path, output_path, partition_col):
+        # Load the CSV file into a Spark DataFrame
+        df = spark.read.option("header", True).csv(input_path)
+
+        # Persist the cleaned DataFrame with a dynamic partition column
+        df.write.mode("overwrite").partitionBy(partition_col).parquet(output_path)
+
+        print(f"Data saved to {output_path} partitioned by '{partition_col}'")
