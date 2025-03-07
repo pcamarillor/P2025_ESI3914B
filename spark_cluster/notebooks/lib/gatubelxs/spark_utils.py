@@ -24,6 +24,14 @@ class SparkUtils:
            
         return StructType(struct_list)
         
+    def clean_df():
+        
+    
+    def write_df(df,partition,file_name):
+        df.write \
+                .mode("overwrite") \
+                .partitionBy(partition) \
+                .parquet("/home/jovyan/notebooks/data/"+ file_name)
         
         
         
