@@ -1,5 +1,5 @@
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType, BooleanType, DateType, LongType, ShortType, DoubleType, TimestampType, BinaryType
-from pyspark.sqk import DataFrame
+from pyspark.sql import DataFrame
 
 class SparkUtils:
     @staticmethod
