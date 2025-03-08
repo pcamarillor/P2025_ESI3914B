@@ -21,9 +21,8 @@ class SparkUtils:
             "array": lambda element_type: ArrayType(element_type),
             "data": DataType(),
             "map": lambda key_type, value_type: MapType(key_type, value_type),
-            "null": NullType(),
-            "char": CharType(),
-            "varchar": VarcharType(),
+            "char": lambda length=1: CharType(length),
+            "varchar": lambda length=255: VarcharType(length),
             "dayTimeInterval": DayTimeIntervalType(),
             "yearMonthInterval": YearMonthIntervalType()
         }
@@ -34,7 +33,14 @@ class SparkUtils:
         
     @staticmethod
     def clean_df(df: DataFrame) -> DataFrame:
-        return df.dropna()
+        # List of columns to check for the 'Not Given' value
+        columns_to_check = ['show_id', 'director', 'type', 'country', 'date', 'rating', 'duration', 'listed_in']
+        
+        # Filter out rows where any of the specified columns have the value 'Not Given'
+        for col_name in columns_to_check:
+            df = df.filter(df[col_name] != 'Not Given')
+        
+        return df
     
     @staticmethod
     def write_df(df: DataFrame, path: str):
