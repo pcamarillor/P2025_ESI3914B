@@ -49,48 +49,58 @@ class SparkUtils:
     
     @staticmethod
     def clean_df(df):
-    # Registrar el DataFrame original como vista temporal
-        df.createOrReplaceTempView("netflix_raw")
-    
-     # Crear una tabla temporal con el esquema deseado
-        spark.sql("""
-        CREATE OR REPLACE TEMPORARY VIEW netflix_clean AS
-        SELECT
-            show_id,
-            type,
-            title,
-            COALESCE(director, 'Not Given') AS director NOT NULL,
-            COALESCE(country, 'Unknown') AS country NOT NULL,
-            COALESCE(rating, 'Not Rated') AS rating NOT NULL,
-            COALESCE(duration, '0 min') AS duration NOT NULL,
-            COALESCE(listed_in, 'Uncategorized') AS listed_in NOT NULL,
-            COALESCE(release_year, 0) AS release_year NOT NULL,
-            date_added
-        FROM netflix_raw
-        """)
-    
-    # Recuperar el DataFrame limpio con el esquema correcto
-        clean_df = spark.table("netflix_clean")
-    
-    # Mostrar el recuento de valores nulos después de la limpieza
+        # Mostrar el recuento de valores nulos antes de la limpieza
+        print("Number of nulls before cleaning:")
+        df.select([sum(col(c).isNull().cast("int")).alias(c) for c in df.columns]).show()
+        
+        # Columnas que no deben tener valores nulos según la especificación
+        non_nullable_columns = ["director", "country", "rating", "duration", "listed_in", "release_year"]
+        
+        # Crear un nuevo DataFrame con valores nulos reemplazados en columnas non-nullable
+        clean_df = df.na.fill({
+            "director": "Not Given",
+            "country": "Unknown",
+            "rating": "Not Rated",
+            "duration": "0 min",
+            "listed_in": "Uncategorized",
+            "release_year": 0
+        })
+        
+        # Mostrar el recuento de valores nulos después de la limpieza
         print("Number of nulls after cleaning:")
-        clean_df.select([sum(col(c).isNull().cast("int")).alias(c) for c in clean_df.columns]).show()
-    
-        return clean_df
-    
+        clean_df.select([sum(col(c).isNull().cast("int")).alias(c) for c in df.columns]).show()
+        
+        # Definir el esquema según la especificación
+        expected_schema = StructType([
+            StructField("show_id", StringType(), True),
+            StructField("type", StringType(), True),
+            StructField("title", StringType(), True),
+            StructField("director", StringType(), False),
+            StructField("country", StringType(), False),
+            StructField("rating", StringType(), False),
+            StructField("duration", StringType(), False),
+            StructField("listed_in", StringType(), False),
+            StructField("release_year", IntegerType(), False),
+            StructField("date_added", DateType(), True)
+        ])
+        
+        # Asegurarnos de que no hay valores nulos en las columnas que no deben tenerlos
+        for column in non_nullable_columns:
+            assert clean_df.filter(col(column).isNull()).count() == 0, f"Hay valores nulos en {column}"
+        
+        # Intentar crear el DataFrame con el esquema correcto
+        rows = clean_df.collect()
+        final_df = spark.createDataFrame(rows, expected_schema)
+        
+        return final_df
     
     @staticmethod
-    def write_df(df, path, format="parquet", mode="overwrite", partition_by=None):
-        writer = df.write.format(format).mode(mode)
+    def write_df(df, path, format="parquet", mode="overwrite", partition_by="release_year"):
+        # Particionar por release_year como se requiere
+        df.write \
+          .format(format) \
+          .mode(mode) \
+          .partitionBy(partition_by) \
+          .save(path)
         
-        # Si se especifica partición, aplicarla
-        if partition_by:
-            writer = writer.partitionBy(partition_by)
-            partition_info = f" particionado por {partition_by}"
-        else:
-            partition_info = ""
-            
-        # Guardar el DataFrame
-        writer.save(path)
-        
-        print(f"DataFrame escrito exitosamente en {path} en formato {format}{partition_info}")
+        print(f"DataFrame escrito exitosamente en {path} en formato {format}, particionado por {partition_by}")
