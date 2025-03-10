@@ -24,9 +24,18 @@ class SparkUtils:
            
         return StructType(struct_list)
         
-    def clean_df():
-        
+    def clean_df(df):
+        fill_values = {}
+        for column, dtype in df.dtypes:
+            if dtype.startswith("int"):
+                fill_values[column] = 0
+            elif dtype.startswith("double") or dtype.startswith("float"):
+                fill_values[column] = 0.0
+            else:
+                fill_values[column] = "Unknown"
     
+        return df.fillna(fill_values)
+        
     def write_df(df,partition,file_name):
         df.write \
                 .mode("overwrite") \
