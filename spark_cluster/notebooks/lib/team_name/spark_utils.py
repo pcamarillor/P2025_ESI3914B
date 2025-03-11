@@ -47,6 +47,7 @@ class SparkUtils:
             .mode(options["mode"]) \
             .partitionBy(options["parition_cols"]) \
             .format(options["format"]) \
+            .option("header", "true") \
             .save(options["path"])
         
         print("Done")
