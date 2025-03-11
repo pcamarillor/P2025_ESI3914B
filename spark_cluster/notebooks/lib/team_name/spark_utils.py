@@ -36,3 +36,18 @@ class SparkUtils:
             struct_fields.append(struct_field)
 
         return StructType(struct_fields)
+    
+    @staticmethod
+    def clean_df(df, dict_null_values):
+        return df.fillna(dict_null_values)
+    
+    @staticmethod
+    def write_df(df, options):
+        df.write \
+            .mode(options["mode"]) \
+            .partitionBy(options["parition_cols"]) \
+            .format(options["format"]) \
+            .option("header", "true") \
+            .save(options["path"])
+        
+        print("Done")
