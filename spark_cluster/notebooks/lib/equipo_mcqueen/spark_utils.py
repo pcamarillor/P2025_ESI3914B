@@ -1,5 +1,4 @@
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, LongType, ShortType, DoubleType, FloatType, BooleanType, DateType, TimestampType, BinaryType, ArrayType, MapType
-
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType, LongType, ShortType, DoubleType, FloatType, BooleanType, DateType, TimestampType, BinaryType
 class SparkUtils:
     @staticmethod
     def generate_schema(columns_info) -> StructType:
@@ -28,3 +27,14 @@ class SparkUtils:
 
         # Return the schema
         return StructType(schema)
+    
+    @staticmethod
+    def clean_df(df):
+        # Remove rows with null values
+        df = df.na.drop()
+        return df
+    
+    @staticmethod
+    def write_df(df, partition, output_path) -> None:
+        # Follow class slides sample code
+        df.write.mode("overwrite").partitionBy(partition).parquet(output_path)
