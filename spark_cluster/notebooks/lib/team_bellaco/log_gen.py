@@ -19,13 +19,16 @@ def generate_log_entry():
     return f"{timestamp} | {level} | {message} | {server}"
 
 def generate_logs(n, log_dir, filename):
-    log_path = Path(log_dir) / filename
-    log_path.parent.mkdir(parents=True, exist_ok=True) 
     
-    with open(log_path, "a") as log_file:
-        for _ in range(n):
-            log_entry = generate_log_entry()
-            log_file.write(log_entry + "\n")
+    for file in range(n):
+        currentFilename = filename + "-" + str(file) + ".log"
+        log_path = Path(log_dir) / currentFilename
+        log_path.parent.mkdir(parents=True, exist_ok=True) 
+        
+        with open(log_path, "a") as log_file:
+            for line in range(n):
+                log_entry = generate_log_entry()
+                log_file.write(log_entry + "\n")        
     
     print(f"Logs guardados en: {log_path}")
 
