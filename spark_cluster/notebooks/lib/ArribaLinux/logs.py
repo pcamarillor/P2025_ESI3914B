@@ -1,8 +1,10 @@
 import random
 import time
+import os
 from datetime import datetime as dt
 
-log_file = "spark_cluster/data/logs.txt"
+output_dir = "/home/jovyan/notebooks/data/logs"
+os.makedirs(output_dir, exist_ok=True)
 
 log_info = ["INFO", "WARN", "ERROR"]
 messages = {
@@ -21,10 +23,14 @@ def generate_log():
 
     return f"{timestamp} | {info} | {message} | {server}"
 
-with open(log_file, "a") as file:
-    while True:
-        log_entry = generate_log()
-        print(log_entry)
-        file.write(log_entry + "\n")
-        file.flush()
-        time.sleep(random.uniform(1, 3))
+while True:
+    
+    # Write to file
+    filename = f"{output_dir}/data_{int(time.time())}.log"
+    with open(filename, 'a') as f:
+        n = random.randint(30,300)
+        # Create a random number of lines
+        _ = [f.write(generate_log() + "\n") for i in range(n)]
+
+    # Wait 10 seconds
+    time.sleep(5)
