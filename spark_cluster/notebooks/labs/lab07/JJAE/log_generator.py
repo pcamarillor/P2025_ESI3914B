@@ -4,12 +4,14 @@ import datetime
 import os
 
 def generate_log_entry():
-    # Fecha
+    # Current date and time
     fecha = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    # Random log type
     tipos = ["INFO", "WARN", "ERROR"]
     tipo = random.choice(tipos)
     
-    # Opciones de descripcion
+    # Descriptions based on log type
     descriptions = {
         "INFO": [
             "Application started successfully",
@@ -43,30 +45,39 @@ def generate_log_entry():
     # Random server node
     server_node = f"Server-node-{random.randint(1, 5)}"
     
-    # Formato
+    # Format: Fecha | Tipo | DESCRIPTION | Server-node-x
     return f"{fecha} | {tipo} | {description} | {server_node}"
 
-def generate_log_file(filename, interval=5, entries_per_batch=None):
+def generate_batch_log_files(log_dir='logs', interval=5, entries_per_batch=None):
+    # Create logs directory if it doesn't exist
+    os.makedirs(log_dir, exist_ok=True)
+    
+    batch_count = 1
+    
     try:
         while True:
-            # Batches de entre 5-10
+            # Determine number of entries in this batch (5-10 if not specified)
             if entries_per_batch is None:
                 num_entries = random.randint(5, 10)
             else:
                 num_entries = entries_per_batch
                 
-            # Generate and write the entries
-            with open(filename, 'a') as f:
+            # Create a unique filename for this batch using timestamp
+            timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+            log_file = os.path.join(log_dir, f"batch_{batch_count}_logs_{timestamp}.log")
+                
+            # Generate and write the entries to a new file
+            with open(log_file, 'w') as f:
                 for _ in range(num_entries):
                     log_entry = generate_log_entry()
                     f.write(log_entry + "\n")
             
-            print(f"Added {num_entries} log entries to {filename}")
+            print(f"Created log file {log_file} with {num_entries} entries")
+            batch_count += 1
             time.sleep(interval)
     except KeyboardInterrupt:
         print("\nLog generation stopped by user")
 
 if __name__ == "__main__":
-    log_file = "application.log"
-    print(f"Generando logs {log_file}")
-    generate_log_file(log_file)
+    print(f"Starting batch log generation")
+    generate_batch_log_files()
