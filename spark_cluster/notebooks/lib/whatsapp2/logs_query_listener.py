@@ -1,6 +1,6 @@
 from pyspark.sql.streaming import StreamingQueryListener
 
-class TrafficListener(StreamingQueryListener):
+class LogsListener(StreamingQueryListener):
     def onQueryStarted(self, event):
         print(f"Query started: {event.id}")
 
