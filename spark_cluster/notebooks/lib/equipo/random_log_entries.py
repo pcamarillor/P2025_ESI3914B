@@ -13,7 +13,7 @@ messages = [
     "File uploaded successfully"
 ]
 servers = ["server-node-1", "server-node-2", "server-node-3"]
-source_dir = "/home/jovyan/notebooks/data/log_streaming/"
+source_dir = "/home/jovyan/notebooks/data/log_streaming/input/"
 
 os.makedirs(source_dir, exist_ok=True)
 
