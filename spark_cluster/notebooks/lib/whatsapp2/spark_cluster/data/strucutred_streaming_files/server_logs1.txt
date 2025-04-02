@@ -1,6 +1,0 @@
-2025-04-02 09:27:27 | WARN | User login successful | server-node-2
-2025-04-02 09:27:28 | WARN | User login successful | server-node-2
-2025-04-02 09:27:33 | INFO | User login successful | server-node-3
-2025-04-02 09:27:35 | INFO | User login successful | server-node-2
-2025-04-02 09:27:40 | ERROR | 502 Bad Gateway | server-node-1
-2025-04-02 09:27:44 | INFO | User login successful | server-node-1

@@ -1,5 +1,0 @@
-2025-04-02 09:27:47 | ERROR | 404 Not Found | server-node-1
-2025-04-02 09:27:52 | INFO | User login successful | server-node-2
-2025-04-02 09:27:56 | ERROR | 502 Bad Gateway | server-node-3
-2025-04-02 09:28:01 | WARN | User login successful | server-node-3
-2025-04-02 09:28:05 | ERROR | 404 Not Found | server-node-2

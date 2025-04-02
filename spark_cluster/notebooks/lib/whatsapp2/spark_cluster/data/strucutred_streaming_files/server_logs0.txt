@@ -1,6 +1,0 @@
-2025-04-02 09:27:05 | WARN | User login successful | server-node-2
-2025-04-02 09:27:09 | ERROR | 403 Forbidden | server-node-1
-2025-04-02 09:27:11 | INFO | User login successful | server-node-3
-2025-04-02 09:27:15 | WARN | User login successful | server-node-1
-2025-04-02 09:27:20 | WARN | User login successful | server-node-3
-2025-04-02 09:27:24 | WARN | User login successful | server-node-2
