@@ -16,7 +16,7 @@ error_messages = [
 servers = ["server-node-1", "server-node-2", "server-node-3"]
 
 # Log directory
-log_dir = "/home/jovyan/notebooks/data/structured_streaming_files/server_logs/"
+log_dir = "../../data/structured_streaming_files/logs/"
 
 # Crear el directorio si no existe
 os.makedirs(log_dir, exist_ok=True)
