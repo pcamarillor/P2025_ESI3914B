@@ -1,3 +1,4 @@
+import os
 import time
 import random
 from datetime import datetime
@@ -16,6 +17,9 @@ servers = ["server-node-1", "server-node-2", "server-node-3"]
 
 # Log directory
 log_dir = "spark_cluster/data/strucutred_streaming_files/"
+
+# Crear el directorio si no existe
+os.makedirs(log_dir, exist_ok=True)
 
 i = 0  # File counter
 start_time = time.time()
@@ -38,4 +42,3 @@ while True:
     if time.time() - start_time >= 20:
         i += 1
         start_time = time.time()
-

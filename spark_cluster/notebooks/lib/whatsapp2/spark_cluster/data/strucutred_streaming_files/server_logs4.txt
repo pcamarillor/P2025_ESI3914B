@@ -1,0 +1,8 @@
+2025-04-02 09:28:31 | ERROR | 404 Not Found | server-node-2
+2025-04-02 09:28:32 | WARN | User login successful | server-node-1
+2025-04-02 09:28:35 | INFO | User login successful | server-node-2
+2025-04-02 09:28:36 | WARN | User login successful | server-node-2
+2025-04-02 09:28:39 | WARN | User login successful | server-node-1
+2025-04-02 09:28:40 | INFO | User login successful | server-node-2
+2025-04-02 09:28:43 | INFO | User login successful | server-node-3
+2025-04-02 09:28:48 | ERROR | 500 Internal Server Error | server-node-1

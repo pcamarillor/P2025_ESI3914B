@@ -1,0 +1,7 @@
+2025-04-02 09:28:10 | INFO | User login successful | server-node-3
+2025-04-02 09:28:14 | WARN | User login successful | server-node-2
+2025-04-02 09:28:16 | INFO | User login successful | server-node-2
+2025-04-02 09:28:18 | ERROR | 403 Forbidden | server-node-3
+2025-04-02 09:28:21 | INFO | User login successful | server-node-3
+2025-04-02 09:28:24 | ERROR | 502 Bad Gateway | server-node-3
+2025-04-02 09:28:28 | WARN | User login successful | server-node-1
