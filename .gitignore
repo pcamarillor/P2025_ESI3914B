@@ -14,3 +14,5 @@ spark_cluster/notebooks/lab01/.ipynb_checkpoints/
 *.pyc
 .DS_Store
 spark_cluster/notebooks/examples/.DS_Store
+spark_cluster/notebooks/examples/example_structured_streaming_files_traffic_data.ipynb
+spark_cluster/notebooks/examples/example_structured_streaming_sockets.ipynb
