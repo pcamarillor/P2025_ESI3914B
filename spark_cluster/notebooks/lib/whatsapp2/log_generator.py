@@ -16,7 +16,7 @@ error_messages = [
 servers = ["server-node-1", "server-node-2", "server-node-3"]
 
 # Log directory
-log_dir = "../../data/structured_streaming_files/logs/"
+log_dir = "../../../data/structured_streaming_files/logs/"
 
 # Crear el directorio si no existe
 os.makedirs(log_dir, exist_ok=True)
@@ -36,7 +36,7 @@ while True:
         print(log_entry.strip())
         f.write(log_entry)
     
-    time.sleep(random.randint(1, 5))
+    time.sleep(random.randint(1,2))
     
     # Create a new file every 20 seconds
     if time.time() - start_time >= 20:
