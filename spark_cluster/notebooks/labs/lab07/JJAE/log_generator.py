@@ -5,11 +5,11 @@ import os
 
 def generate_log_entry():
     # Current date and time
-    fecha = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     # Random log type
-    tipos = ["INFO", "WARN", "ERROR"]
-    tipo = random.choice(tipos)
+    types = ["INFO", "WARN", "ERROR"]
+    type = random.choice(types)
     
     # Descriptions based on log type
     descriptions = {
@@ -40,15 +40,15 @@ def generate_log_entry():
             "Data corruption detected"
         ]
     }
-    description = random.choice(descriptions[tipo])
+    description = random.choice(descriptions[type])
     
     # Random server node
     server_node = f"Server-node-{random.randint(1, 5)}"
     
-    # Format: Fecha | Tipo | DESCRIPTION | Server-node-x
-    return f"{fecha} | {tipo} | {description} | {server_node}"
+    # Format: date | type | DESCRIPTION | Server-node-x
+    return f"{date} | {type} | {description} | {server_node}"
 
-def generate_batch_log_files(log_dir='logs', interval=5, entries_per_batch=None):
+def generate_batch_log_files(log_dir='C:\\Users\\josea\\ITESO\\BigData\\P2025_ESI3914B\\spark_cluster\\data\\strucutred_streaming_files', interval=5, entries_per_batch=None):
     # Create logs directory if it doesn't exist
     os.makedirs(log_dir, exist_ok=True)
     
