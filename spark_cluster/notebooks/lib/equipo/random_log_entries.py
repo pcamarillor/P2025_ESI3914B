@@ -33,4 +33,4 @@ while True:
             file.write(log_entry)
 
     print(f"Archivo generado: {output}")
-    sleep(2)
+    sleep(5)
