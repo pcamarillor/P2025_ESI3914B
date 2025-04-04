@@ -5,6 +5,7 @@ class TrafficListener(StreamingQueryListener):
         print(f"Query started: {event.id}")
 
     def onQueryProgress(self, event):
+        num_rows = event.progress.numInputRows
         print(f"Query made progress: {event.progress}")
 
         if num_rows >= 50:
