@@ -11,8 +11,8 @@ def generate_random_traffic_line():
         # Generate random data
         timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
         type = random.choice(['| Error | 500 Internal Server Error', '| Info | Login Success', '| Warn | Disk Usage' ])
-        server = random.choice(['| server-node-1','server-node-2' ])
-        log_line = f"{timestamp}{type}{server}"
+        server = random.choice(['| server-node-1','| server-node-2' ])
+        log_line = f"{timestamp} {type} {server}"
         return log_line
 
 while True:
