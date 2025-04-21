@@ -7,5 +7,5 @@ def generate_transaction_data():
     return {
         'origin_id': random.choice(sensor_ids),
         'event_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        'ammount': random.uniform(13.0, 5673.0)
+        'amount': random.uniform(13.0, 5673.0)
     }
