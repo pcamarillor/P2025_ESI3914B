@@ -1,7 +1,7 @@
 # pip install google-api-python-client
 from googleapiclient.discovery import build
 
-api_key = 'AIzaSyCfQZaH4vn5yf2xYnAo3NkqJHM6KzIJpqM'
+api_key = 'mi_api, jaja'
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 def get_video_info(video_id):
