@@ -1,0 +1,22 @@
+2025-03-28 08:26:05 | ERROR | API request failed | Server-node-3
+2025-03-28 08:26:05 | INFO | Database connection established | Server-node-4
+2025-03-28 08:26:05 | ERROR | Authentication error | Server-node-5
+2025-03-28 08:26:05 | ERROR | API request failed | Server-node-2
+2025-03-28 08:26:05 | INFO | Configuration loaded | Server-node-1
+2025-03-28 08:26:05 | WARN | Connection attempt retry | Server-node-2
+2025-03-28 08:26:10 | WARN | Timeout on external API call | Server-node-1
+2025-03-28 08:26:10 | INFO | Configuration loaded | Server-node-4
+2025-03-28 08:26:10 | WARN | Resource utilization above threshold | Server-node-2
+2025-03-28 08:26:10 | WARN | Resource utilization above threshold | Server-node-1
+2025-03-28 08:26:10 | WARN | High memory usage detected | Server-node-5
+2025-03-28 08:26:10 | INFO | Application started successfully | Server-node-4
+2025-03-28 08:26:10 | INFO | Database connection established | Server-node-3
+2025-03-28 08:26:10 | WARN | Timeout on external API call | Server-node-4
+2025-03-28 08:26:15 | INFO | Configuration loaded | Server-node-2
+2025-03-28 08:26:15 | WARN | Slow database query | Server-node-2
+2025-03-28 08:26:15 | WARN | Timeout on external API call | Server-node-5
+2025-03-28 08:26:15 | INFO | Cache refreshed | Server-node-1
+2025-03-28 08:26:15 | INFO | Data processing completed | Server-node-4
+2025-03-28 08:26:15 | INFO | User login successful | Server-node-1
+2025-03-28 08:26:15 | ERROR | Database connection failed | Server-node-5
+2025-03-28 08:26:15 | WARN | Resource utilization above threshold | Server-node-4
