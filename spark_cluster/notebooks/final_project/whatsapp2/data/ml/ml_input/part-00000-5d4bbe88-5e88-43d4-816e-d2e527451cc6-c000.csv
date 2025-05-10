@@ -1,0 +1,25 @@
+platform,user_id,post_id,event_time,likes,comments,shares
+Facebook,user_fb_184,post_9298,2025-05-10 05:05:36,181,45,67
+Facebook,user_fb_137,post_3645,2025-05-10 05:05:46,2949,580,52
+Facebook,user_fb_221,post_6507,2025-05-10 05:05:52,1290,45,118
+Facebook,user_fb_26,post_7578,2025-05-10 05:05:54,2230,184,85
+Facebook,user_fb_239,post_6854,2025-05-10 05:05:54,1733,229,86
+Twitter,user_tw_402,tweet_75773,2025-05-10 05:05:31,1681,148,308
+Twitter,user_tw_472,tweet_49868,2025-05-10 05:05:32,1032,143,302
+Twitter,user_tw_342,tweet_21133,2025-05-10 05:05:33,94,261,379
+Twitter,user_tw_346,tweet_92359,2025-05-10 05:05:42,1870,13,75
+Twitter,user_tw_237,tweet_69535,2025-05-10 05:05:43,1037,291,478
+Twitter,user_tw_38,tweet_56456,2025-05-10 05:05:45,81,24,31
+Twitter,user_tw_278,tweet_58425,2025-05-10 05:05:49,503,73,72
+TikTok,user_tt_130,,2025-05-10 05:05:30,7913,303,226
+TikTok,user_tt_7,,2025-05-10 05:05:34,1983,90,148
+TikTok,user_tt_54,,2025-05-10 05:05:38,10,530,276
+TikTok,user_tt_447,,2025-05-10 05:05:40,7167,565,249
+TikTok,user_tt_221,,2025-05-10 05:05:56,5897,294,259
+Instagram,user_ig_435,post_3857,2025-05-10 05:05:37,2022,23,7
+Instagram,user_ig_187,post_5740,2025-05-10 05:05:39,4333,431,42
+Instagram,user_ig_376,post_4280,2025-05-10 05:05:46,2105,418,4
+Instagram,user_ig_247,post_5043,2025-05-10 05:05:47,2741,154,65
+Instagram,user_ig_67,post_9141,2025-05-10 05:05:50,4943,278,10
+Instagram,user_ig_459,post_7702,2025-05-10 05:05:57,779,117,7
+Instagram,user_ig_330,post_3468,2025-05-10 05:05:59,2914,91,69
