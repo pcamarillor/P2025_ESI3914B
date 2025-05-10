@@ -1,4 +1,4 @@
-# <center> <img src="./ITESOLogo.png" alt="ITESO" width="480" height="130"> </center>
+# <center> <img src="./img/ITESOLogo.png" alt="ITESO" width="480" height="130"> </center>
 # <center> **Departamento de Electrónica, Sistemas e Informática** </center>
 ---
 ## <center> **Proyecto Final: Website Activity** </center>
