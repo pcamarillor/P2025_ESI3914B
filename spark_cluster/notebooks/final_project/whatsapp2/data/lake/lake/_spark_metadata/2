@@ -1,0 +1,4 @@
+v1
+{"path":"file:///home/jovyan/notebooks/final_project/whatsapp2/data/lake/lake/part-00000-f8dcda9e-e89e-4b69-bf70-c27b63b4f0b0-c000.snappy.parquet","size":2156,"isDir":false,"modificationTime":1746853295242,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///home/jovyan/notebooks/final_project/whatsapp2/data/lake/lake/part-00001-fa69e17e-c169-4369-9533-755bc2596dc6-c000.snappy.parquet","size":2023,"isDir":false,"modificationTime":1746853296467,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///home/jovyan/notebooks/final_project/whatsapp2/data/lake/lake/part-00002-1f557293-ce36-49e0-8c09-035ae57a9355-c000.snappy.parquet","size":2162,"isDir":false,"modificationTime":1746853297310,"blockReplication":1,"blockSize":33554432,"action":"add"}
