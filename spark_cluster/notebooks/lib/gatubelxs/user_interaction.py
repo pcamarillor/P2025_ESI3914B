@@ -3,7 +3,7 @@ from datetime import datetime
 from .products import sample_product
 
 def generate_user_interaction(user_id, session_id):
-    p = sample_product()
+    p = sample_product(user_id)
     interaction_type = choice(["scroll",
                                       "hover",
                                       "form_submit",
@@ -14,7 +14,7 @@ def generate_user_interaction(user_id, session_id):
         details["scroll_depth"] = randint(10,100)
     elif interaction_type == "hover":
         details["element"] = choice(
-            ["img_banner", "product_card", "nav_linl"]
+            ["img_banner", "product_card", "nav_link"]
         )
     elif interaction_type == "form_submit":
         details["form_id"] = "signup_for"

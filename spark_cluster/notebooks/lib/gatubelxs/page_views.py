@@ -11,7 +11,7 @@ def generate_page_view(user_id, session_id):
     '''
     Method to generate the tracking data of a page view
     '''
-    p = sample_product()
+    p = sample_product(user_id)
     return {
         "user_id": user_id,
         "session_id": session_id,
