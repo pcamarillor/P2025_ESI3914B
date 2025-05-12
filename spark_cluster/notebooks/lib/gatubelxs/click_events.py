@@ -10,7 +10,7 @@ def generate_click_event(user_id, session_id):
         "session_id": session_id,
         "element_id": random.choice([
             "btn_add_to_cart", "link_product",
-            "img_banner", "nav_login", "btn_checkout"
+            "img_banner", "nav_login", "btn_checkout","btn_buy"
         ]),
         "page_url": f"/product/{p['product_id']}",
         "category": p["category"],
