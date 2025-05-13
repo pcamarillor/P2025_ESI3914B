@@ -1,3 +1,14 @@
+# <center> <img src="./img/ITESOLogo.png" alt="ITESO" width="480" height="130"> </center>
+# <center> **Departamento de Electrónica, Sistemas e Informática** </center>
+---
+## <center> **Procesamiento de Datos Masivos** </center>
+---
+### <center> **Primavera 2025** </center>
+---
+**Profesor**: Dr. Pablo Camarillo Ramirez
+---
+
+
 # Real-Time Financial Data Stream with Apache Spark and Kafka
 
 This project simulates a real-time financial data pipeline using historical stock data from Yahoo Finance. It streams processed data through Kafka, consumes it with Apache Spark Structured Streaming, and writes it to disk in Parquet format. This data is used to train ML model and create forecasts in stock prices.
@@ -24,7 +35,7 @@ The producer sends messages to Kafka, and the consumer processes them as they ar
 The producer sends JSON messages to Kafka. JSON is a flexible format that can handle structured and semi-structured data.
 The data is ultimately stored in Parquet, a columnar storage format suitable for structured data.
 
-![Financial Data Variety Visualization](./example-kafka.jpeg)
+![Financial Data Variety Visualization](./img/example-kafka.jpeg)
 
 - **Veracity**: Financial data inherently requires a degree of accuracy.
 The proyect uses train ML model to create forecasts. The reliability of the input data is crucial for the accuracy of these models and forecasts.
@@ -45,7 +56,12 @@ The real-time aspect adds value by enabling timely analysis and potentially fast
     *   Once trained, the Random Forest model can take the latest processed data (features) from the incoming stream as input.
     *   It then outputs a forecast for the stock price or its movement for a future time period (e.g., the next trading day).
 
+## 🌐 Data Visualization
+
+![Financial Data Dashboard](./img/Dashboard.jpeg)
+
 ## ⚒️ Conclusions
+
 
 This project successfully demonstrated the construction of a real-time financial data pipeline leveraging Apache Kafka for message brokering and Apache Spark Structured Streaming for data consumption and processing. Key outcomes include the ability to ingest streaming stock data, process it in real-time, and store it efficiently in Parquet format, laying the groundwork for subsequent machine learning model training and stock price forecasting.
 
