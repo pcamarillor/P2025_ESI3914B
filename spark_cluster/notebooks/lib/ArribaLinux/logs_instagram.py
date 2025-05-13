@@ -1,3 +1,4 @@
+from kafka import KafkaProducer
 import random 
 import time
 import os 
@@ -5,6 +6,11 @@ from datetime import datetime as dt
 
 output_dir = "/home/jovyan/notebooks/data/instagram_logs"
 os.makedirs(output_dir, exist_ok=True)
+
+producer = KafkaProducer(
+    bootstrap_servers='78a305ddc318:9093',
+    value_serializer=lambda v: v.encode('utf-8')
+)
 
 user_ids = [f"user_{i}" for i in range(1, 51)]
 insta_texts = [
@@ -20,7 +26,7 @@ insta_texts = [
     "Workout done"
 ]
 
-def generate_tweet():
+def generate_post():
     timestamp = dt.now().strftime("%Y-%m-%d %H:%M:%S")
     user = random.choice(user_ids)
     text = random.choice(insta_texts)
@@ -28,13 +34,8 @@ def generate_tweet():
     return f"{timestamp} | instagram | {user} | {text} | {likes}"
 
 while True:
-    
-    # Write to file
-    filename = f"{output_dir}/insta_{int(time.time())}.log"
-    with open(filename, 'a') as f:
-        n = random.randint(30,300)
-        # Create a random number of lines
-        _ = [f.write(generate_tweet() + "\n") for i in range(n)]
-
-    # Wait 10 seconds
+    for _ in range(random.randint(30, 50)):
+        post = generate_post()
+        producer.send("instagram_topic", post)
+        print(f"Sent to instagram_topic: {post}")
     time.sleep(5)
