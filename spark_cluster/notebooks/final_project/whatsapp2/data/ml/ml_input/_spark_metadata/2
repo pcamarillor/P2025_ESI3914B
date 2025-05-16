@@ -1,4 +1,0 @@
-v1
-{"path":"file:///home/jovyan/notebooks/final_project/whatsapp2/data/ml/ml_input/part-00000-0e9f8260-7e6f-4b43-bc23-ba9c1bf99d51-c000.csv","size":245,"isDir":false,"modificationTime":1746853291793,"blockReplication":1,"blockSize":33554432,"action":"add"}
-{"path":"file:///home/jovyan/notebooks/final_project/whatsapp2/data/ml/ml_input/part-00001-0dbb5e16-8cb5-4584-8d79-392d4ec1064e-c000.csv","size":108,"isDir":false,"modificationTime":1746853293487,"blockReplication":1,"blockSize":33554432,"action":"add"}
-{"path":"file:///home/jovyan/notebooks/final_project/whatsapp2/data/ml/ml_input/part-00002-1c0794a3-4cab-4422-af34-73f4247de4f4-c000.csv","size":248,"isDir":false,"modificationTime":1746853294497,"blockReplication":1,"blockSize":33554432,"action":"add"}
