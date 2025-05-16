@@ -14,3 +14,4 @@ spark_cluster/notebooks/lab01/.ipynb_checkpoints/
 *.pyc
 .DS_Store
 spark_cluster/notebooks/examples/.DS_Store
+spark_cluster/notebooks/final_project/whatsapp2/data
