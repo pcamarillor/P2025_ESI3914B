@@ -5,7 +5,7 @@ Welcome to the repository for submitting lab code and projects for the **Big Dat
 ## Table of Contents
 
 - [Repository Structure](#repository-structure)
-- [How to Submit Assignments](#how-to-submit-assignments)
+
 
 
 ## Repository Structure
